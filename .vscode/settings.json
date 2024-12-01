@@ -3,5 +3,8 @@
     {
       "mode": "auto"
     }
+  ],
+  "marquee.widgets.npm-stats.packageNames": [
+    "complete-saas-boilerplate-code"
   ]
 }
