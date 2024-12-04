@@ -66,6 +66,9 @@ importers:
       next:
         specifier: 15.0.3
         version: 15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
+      path:
+        specifier: ^0.12.7
+        version: 0.12.7
       react:
         specifier: 19.0.0-rc-66855b96-20241106
         version: 19.0.0-rc-66855b96-20241106
@@ -82,6 +85,9 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.1
+      css-loader:
+        specifier: ^7.1.2
+        version: 7.1.2(webpack@5.96.1)
       eslint:
         specifier: ^8
         version: 8.57.1
@@ -91,6 +97,12 @@ importers:
       postcss:
         specifier: ^8
         version: 8.4.49
+      postcss-loader:
+        specifier: ^8.1.1
+        version: 8.1.1(postcss@8.4.49)(typescript@5.6.3)(webpack@5.96.1)
+      style-loader:
+        specifier: ^4.0.0
+        version: 4.0.0(webpack@5.96.1)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.15(ts-node@10.9.2(@types/node@20.17.6)(typescript@5.6.3))
@@ -137,10 +149,15 @@ importers:
         specifier: ^8.15.0
         version: 8.15.0(eslint@9.15.0(jiti@1.21.6))(typescript@5.5.4)
 
+  packages/ts-types: {}
+
   packages/typescript-config: {}
 
   packages/ui:
     dependencies:
+      '@hookform/resolvers':
+        specifier: ^3.9.1
+        version: 3.9.1(react-hook-form@7.53.2(react@19.0.0-rc-5c56b873-20241107))
       '@radix-ui/react-accordion':
         specifier: ^1.2.1
         version: 1.2.1(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
@@ -162,9 +179,15 @@ importers:
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.1.2
         version: 2.1.2(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-icons':
+        specifier: ^1.3.2
+        version: 1.3.2(react@19.0.0-rc-5c56b873-20241107)
       '@radix-ui/react-label':
         specifier: ^2.1.0
         version: 2.1.0(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-navigation-menu':
+        specifier: ^1.2.1
+        version: 1.2.1(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
       '@radix-ui/react-popover':
         specifier: ^1.1.2
         version: 1.1.2(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
@@ -192,6 +215,9 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.1.4
         version: 1.1.4(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
+      '@repo/zod':
+        specifier: workspace:*
+        version: link:../zod-validation
       '@tanstack/react-table':
         specifier: ^8.20.5
         version: 8.20.5(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
@@ -210,6 +236,12 @@ importers:
       lucide-react:
         specifier: ^0.462.0
         version: 0.462.0(react@19.0.0-rc-5c56b873-20241107)
+      next:
+        specifier: 15.0.3
+        version: 15.0.3(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
+      next-themes:
+        specifier: ^0.4.3
+        version: 0.4.3(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
       react:
         specifier: 19.0.0-rc-5c56b873-20241107
         version: 19.0.0-rc-5c56b873-20241107
@@ -222,6 +254,12 @@ importers:
       react-hook-form:
         specifier: ^7.53.2
         version: 7.53.2(react@19.0.0-rc-5c56b873-20241107)
+      react-icons:
+        specifier: ^5.3.0
+        version: 5.3.0(react@19.0.0-rc-5c56b873-20241107)
+      react-spinners:
+        specifier: ^0.14.1
+        version: 0.14.1(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
       recharts:
         specifier: ^2.13.3
         version: 2.13.3(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
@@ -234,6 +272,9 @@ importers:
       vaul:
         specifier: ^1.1.1
         version: 1.1.1(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -265,6 +306,15 @@ importers:
       typescript:
         specifier: 5.5.4
         version: 5.5.4
+
+  packages/zod-validation:
+    dependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
 
 packages:
 
@@ -1476,6 +1526,11 @@ packages:
   '@hapi/topo@5.1.0':
     resolution: {integrity: sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==}
 
+  '@hookform/resolvers@3.9.1':
+    resolution: {integrity: sha512-ud2HqmGBM0P0IABqoskKWI6PEf6ZDDBZkFqe2Vnl+mTHCEHzr3ISjjZyCwTjC/qpL25JC9aIDkloQejvMeq0ug==}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
     engines: {node: '>=18.18.0'}
@@ -1941,6 +1996,11 @@ packages:
       '@types/react-dom':
         optional: true
 
+  '@radix-ui/react-icons@1.3.2':
+    resolution: {integrity: sha512-fyQIhGDhzfc9pK2kH6Pl9c4BDJGfMkPqkyIgYDthyNYoNg3wVhoJMMh19WS4Up/1KMPFVpNsT2q3WmXn2N1m6g==}
+    peerDependencies:
+      react: ^16.x || ^17.x || ^18.x || ^19.0.0 || ^19.0.0-rc
+
   '@radix-ui/react-id@1.1.0':
     resolution: {integrity: sha512-EJUrI8yYh7WOjNOqpoJaf1jlFIH2LvtgAl+YcFqNCa+4hj64ZXmPkAKOFs/ukjz3byN6bdb/AVUqHkI8/uWWMA==}
     peerDependencies:
@@ -1965,6 +2025,19 @@ packages:
 
   '@radix-ui/react-menu@2.1.2':
     resolution: {integrity: sha512-lZ0R4qR2Al6fZ4yCCZzu/ReTFrylHFxIqy7OezIpWF4bL0o9biKo0pFIvkaew3TyZ9Fy5gYVrR5zCGZBVbO1zg==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+
+  '@radix-ui/react-navigation-menu@1.2.1':
+    resolution: {integrity: sha512-egDo0yJD2IK8L17gC82vptkvW1jLeni1VuqCyzY727dSJdk5cDjINomouLoNk8RVF7g2aNIfENKWL4UzeU9c8Q==}
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
@@ -3305,6 +3378,15 @@ packages:
       typescript:
         optional: true
 
+  cosmiconfig@9.0.0:
+    resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      typescript: '>=4.9.5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
 
@@ -3340,6 +3422,18 @@ packages:
     peerDependencies:
       '@rspack/core': 0.x || 1.x
       webpack: ^5.0.0
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+      webpack:
+        optional: true
+
+  css-loader@7.1.2:
+    resolution: {integrity: sha512-6WvYYn7l/XEGN8Xu2vWFt9nVzrCn39vKyTEFf/ExEyoksJjjSZV/0/35XPlMbpnr6VGhZIUg5yJrL8tGfes/FA==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      '@rspack/core': 0.x || 1.x
+      webpack: ^5.27.0
     peerDependenciesMeta:
       '@rspack/core':
         optional: true
@@ -3738,6 +3832,10 @@ packages:
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
+
+  env-paths@2.2.1:
+    resolution: {integrity: sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==}
+    engines: {node: '>=6'}
 
   error-ex@1.3.2:
     resolution: {integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==}
@@ -5364,6 +5462,12 @@ packages:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}
     engines: {node: '>= 0.4.0'}
 
+  next-themes@0.4.3:
+    resolution: {integrity: sha512-nG84VPkTdUHR2YeD89YchvV4I9RbiMAql3GiLEQlPvq1ioaqPaIReK+yMRdg/zgiXws620qS1rU30TiWmmG9lA==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+
   next@15.0.3:
     resolution: {integrity: sha512-ontCbCRKJUIoivAdGB34yCaOcPgYXr9AAkV/IwqFfWWTXEPUgLYkSkqBhIk9KK7gGmgjc64B+RdoeIDM13Irnw==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
@@ -5653,6 +5757,9 @@ packages:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
 
+  path@0.12.7:
+    resolution: {integrity: sha512-aXXC6s+1w7otVF9UletFkFcDsJeO7lSZBPUQhtb5O0xJe8LtYhj/GxldoL09bBj9+ZmE2hNoHqQSFMN5fikh4Q==}
+
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
@@ -5853,6 +5960,19 @@ packages:
     peerDependencies:
       postcss: ^7.0.0 || ^8.0.1
       webpack: ^5.0.0
+
+  postcss-loader@8.1.1:
+    resolution: {integrity: sha512-0IeqyAsG6tYiDRCYKQJLAmgQr47DX6N7sFSWvQxt6AcupX8DIdmykuk/o/tx0Lze3ErGHJEp5OSRxrelC6+NdQ==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      '@rspack/core': 0.x || 1.x
+      postcss: ^7.0.0 || ^8.0.1
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+      webpack:
+        optional: true
 
   postcss-logical@8.0.0:
     resolution: {integrity: sha512-HpIdsdieClTjXLOyYdUPAX/XQASNIwdKt5hoZW08ZOAiI+tbV0ta1oclkpVkW5ANU+xJvk3KkA0FejkjGLXUkg==}
@@ -6132,6 +6252,10 @@ packages:
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
+  process@0.11.10:
+    resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
+    engines: {node: '>= 0.6.0'}
+
   prompts@2.4.2:
     resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
     engines: {node: '>= 6'}
@@ -6250,6 +6374,11 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
 
+  react-icons@5.3.0:
+    resolution: {integrity: sha512-DnUk8aFbTyQPSkCfF8dbX6kQjXA9DktMeJqfjrg6cK9vwQVMxmcA3BfP4QoiztVmEHtwlTgLFsPuH2NskKT6eg==}
+    peerDependencies:
+      react: '*'
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -6310,6 +6439,12 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+
+  react-spinners@0.14.1:
+    resolution: {integrity: sha512-2Izq+qgQ08HTofCVEdcAQCXFEYfqTDdfeDQJeo/HHQiQJD4imOicNLhkfN2eh1NYEWVOX4D9ok2lhuDB0z3Aag==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
 
   react-style-singleton@2.2.1:
     resolution: {integrity: sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g==}
@@ -6858,6 +6993,12 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
+  style-loader@4.0.0:
+    resolution: {integrity: sha512-1V4WqhhZZgjVAVJyt7TdDPZoPBPNHbekX4fWnCJL1yQukhCeZhJySUL+gL9y6sNdN95uEOS83Y55SqHcP7MzLA==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      webpack: ^5.27.0
+
   style-to-object@0.4.4:
     resolution: {integrity: sha512-HYNoHZa2GorYNyqiCaBgsxvcJIn7OHq6inEga+E6Ke3m5JkoqpQbnFssk4jwe+K7AhGa2fcha4wSOf1Kn01dMg==}
 
@@ -7261,6 +7402,9 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
+  util@0.10.4:
+    resolution: {integrity: sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==}
+
   utila@0.4.0:
     resolution: {integrity: sha512-Z0DbgELS9/L/75wZbro8xAnT50pBVFQZ+hUEueGDU5FN51YSCYM+jdxsfCiHjwNP/4LCDD0i/graKpeBnOXKRA==}
 
@@ -7491,6 +7635,9 @@ packages:
   yocto-queue@1.1.1:
     resolution: {integrity: sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==}
     engines: {node: '>=12.20'}
+
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -9562,6 +9709,10 @@ snapshots:
     dependencies:
       '@hapi/hoek': 9.3.0
 
+  '@hookform/resolvers@3.9.1(react-hook-form@7.53.2(react@19.0.0-rc-5c56b873-20241107))':
+    dependencies:
+      react-hook-form: 7.53.2(react@19.0.0-rc-5c56b873-20241107)
+
   '@humanfs/core@0.19.1': {}
 
   '@humanfs/node@0.16.6':
@@ -9999,6 +10150,10 @@ snapshots:
       '@types/react': 18.3.0
       '@types/react-dom': 18.3.1
 
+  '@radix-ui/react-icons@1.3.2(react@19.0.0-rc-5c56b873-20241107)':
+    dependencies:
+      react: 19.0.0-rc-5c56b873-20241107
+
   '@radix-ui/react-id@1.1.0(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107)':
     dependencies:
       '@radix-ui/react-use-layout-effect': 1.1.0(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107)
@@ -10037,6 +10192,28 @@ snapshots:
       react: 19.0.0-rc-5c56b873-20241107
       react-dom: 19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107)
       react-remove-scroll: 2.6.0(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.1
+
+  '@radix-ui/react-navigation-menu@1.2.1(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)':
+    dependencies:
+      '@radix-ui/primitive': 1.1.0
+      '@radix-ui/react-collection': 1.1.0(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-compose-refs': 1.1.0(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-context': 1.1.1(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-direction': 1.1.0(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-dismissable-layer': 1.1.1(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-id': 1.1.0(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-presence': 1.1.1(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-primitive': 2.0.0(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-use-callback-ref': 1.1.0(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-use-controllable-state': 1.1.0(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-use-layout-effect': 1.1.0(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-use-previous': 1.1.0(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107)
+      '@radix-ui/react-visually-hidden': 1.1.0(@types/react-dom@18.3.1)(@types/react@18.3.0)(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
+      react: 19.0.0-rc-5c56b873-20241107
+      react-dom: 19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107)
     optionalDependencies:
       '@types/react': 18.3.0
       '@types/react-dom': 18.3.1
@@ -11672,6 +11849,15 @@ snapshots:
     optionalDependencies:
       typescript: 5.6.3
 
+  cosmiconfig@9.0.0(typescript@5.6.3):
+    dependencies:
+      env-paths: 2.2.1
+      import-fresh: 3.3.0
+      js-yaml: 4.1.0
+      parse-json: 5.2.0
+    optionalDependencies:
+      typescript: 5.6.3
+
   create-require@1.1.1: {}
 
   cross-spawn@7.0.6:
@@ -11701,6 +11887,19 @@ snapshots:
       postcss-value-parser: 4.2.0
 
   css-loader@6.11.0(webpack@5.96.1):
+    dependencies:
+      icss-utils: 5.1.0(postcss@8.4.49)
+      postcss: 8.4.49
+      postcss-modules-extract-imports: 3.1.0(postcss@8.4.49)
+      postcss-modules-local-by-default: 4.1.0(postcss@8.4.49)
+      postcss-modules-scope: 3.2.1(postcss@8.4.49)
+      postcss-modules-values: 4.0.0(postcss@8.4.49)
+      postcss-value-parser: 4.2.0
+      semver: 7.6.3
+    optionalDependencies:
+      webpack: 5.96.1
+
+  css-loader@7.1.2(webpack@5.96.1):
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.49)
       postcss: 8.4.49
@@ -12109,6 +12308,8 @@ snapshots:
   entities@2.2.0: {}
 
   entities@4.5.0: {}
+
+  env-paths@2.2.1: {}
 
   error-ex@1.3.2:
     dependencies:
@@ -14399,6 +14600,36 @@ snapshots:
 
   netmask@2.0.2: {}
 
+  next-themes@0.4.3(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107):
+    dependencies:
+      react: 19.0.0-rc-5c56b873-20241107
+      react-dom: 19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107)
+
+  next@15.0.3(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107):
+    dependencies:
+      '@next/env': 15.0.3
+      '@swc/counter': 0.1.3
+      '@swc/helpers': 0.5.13
+      busboy: 1.6.0
+      caniuse-lite: 1.0.30001683
+      postcss: 8.4.31
+      react: 19.0.0-rc-5c56b873-20241107
+      react-dom: 19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107)
+      styled-jsx: 5.1.6(react@19.0.0-rc-5c56b873-20241107)
+    optionalDependencies:
+      '@next/swc-darwin-arm64': 15.0.3
+      '@next/swc-darwin-x64': 15.0.3
+      '@next/swc-linux-arm64-gnu': 15.0.3
+      '@next/swc-linux-arm64-musl': 15.0.3
+      '@next/swc-linux-x64-gnu': 15.0.3
+      '@next/swc-linux-x64-musl': 15.0.3
+      '@next/swc-win32-arm64-msvc': 15.0.3
+      '@next/swc-win32-x64-msvc': 15.0.3
+      sharp: 0.33.5
+    transitivePeerDependencies:
+      - '@babel/core'
+      - babel-plugin-macros
+
   next@15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106):
     dependencies:
       '@next/env': 15.0.3
@@ -14733,6 +14964,11 @@ snapshots:
 
   path-type@4.0.0: {}
 
+  path@0.12.7:
+    dependencies:
+      process: 0.11.10
+      util: 0.10.4
+
   picocolors@1.1.1: {}
 
   picomatch@2.3.1: {}
@@ -14927,6 +15163,17 @@ snapshots:
       jiti: 1.21.6
       postcss: 8.4.49
       semver: 7.6.3
+      webpack: 5.96.1
+    transitivePeerDependencies:
+      - typescript
+
+  postcss-loader@8.1.1(postcss@8.4.49)(typescript@5.6.3)(webpack@5.96.1):
+    dependencies:
+      cosmiconfig: 9.0.0(typescript@5.6.3)
+      jiti: 1.21.6
+      postcss: 8.4.49
+      semver: 7.6.3
+    optionalDependencies:
       webpack: 5.96.1
     transitivePeerDependencies:
       - typescript
@@ -15244,6 +15491,8 @@ snapshots:
 
   process-nextick-args@2.0.1: {}
 
+  process@0.11.10: {}
+
   prompts@2.4.2:
     dependencies:
       kleur: 3.0.3
@@ -15400,6 +15649,10 @@ snapshots:
     dependencies:
       react: 19.0.0-rc-5c56b873-20241107
 
+  react-icons@5.3.0(react@19.0.0-rc-5c56b873-20241107):
+    dependencies:
+      react: 19.0.0-rc-5c56b873-20241107
+
   react-is@16.13.1: {}
 
   react-is@18.3.1: {}
@@ -15470,6 +15723,11 @@ snapshots:
       react: 19.0.0-rc-5c56b873-20241107
       react-dom: 19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107)
       react-transition-group: 4.4.5(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107)
+
+  react-spinners@0.14.1(react-dom@19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107))(react@19.0.0-rc-5c56b873-20241107):
+    dependencies:
+      react: 19.0.0-rc-5c56b873-20241107
+      react-dom: 19.0.0-rc-5c56b873-20241107(react@19.0.0-rc-5c56b873-20241107)
 
   react-style-singleton@2.2.1(@types/react@18.3.0)(react@19.0.0-rc-5c56b873-20241107):
     dependencies:
@@ -16206,6 +16464,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
+  style-loader@4.0.0(webpack@5.96.1):
+    dependencies:
+      webpack: 5.96.1
+
   style-to-object@0.4.4:
     dependencies:
       inline-style-parser: 0.1.1
@@ -16213,6 +16475,11 @@ snapshots:
   style-to-object@1.0.8:
     dependencies:
       inline-style-parser: 0.2.4
+
+  styled-jsx@5.1.6(react@19.0.0-rc-5c56b873-20241107):
+    dependencies:
+      client-only: 0.0.1
+      react: 19.0.0-rc-5c56b873-20241107
 
   styled-jsx@5.1.6(react@19.0.0-rc-66855b96-20241106):
     dependencies:
@@ -16684,6 +16951,10 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
+  util@0.10.4:
+    dependencies:
+      inherits: 2.0.3
+
   utila@0.4.0: {}
 
   utility-types@3.11.0: {}
@@ -16991,5 +17262,7 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   yocto-queue@1.1.1: {}
+
+  zod@3.23.8: {}
 
   zwitch@2.0.4: {}
