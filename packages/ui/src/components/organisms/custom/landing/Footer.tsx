@@ -1,166 +1,67 @@
+import { FooterComponentProps, FooterProps } from "@repo/ts-types/src/landing-page/v1";
+import { useEffect } from "react";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
-const Footer = () => {
+const Footer = ({footerList,creator,creatorLink,title,logo,darkLogo}:FooterComponentProps) => {
+    const {theme} = useTheme();
+
+    useEffect(()=>{
+  
+    },[theme,footerList])
+
+    
   return (
-    <div id="footer">
-      <hr className="w-11/12 mx-auto" />
+    <div id="footer" className="w-full container ">
+        <hr className="w-full mx-auto" />
+        <div className="flex container py-20 ">
+            <section className="w-1/2">
+                <a
+                rel="noreferrer noopener"
+                href="/"
+                className="ml-2 font-bold text-xl flex items-center gap-2"
+                >
+                    {theme === "dark" ?
+                    <Image src={darkLogo} alt={title} width={30} height={30} /> : 
+                    <Image src={logo} alt={title} width={30} height={30} />}
+                    {title}
+                </a>
+            </section>
+            <section className="w-full flex flex-wrap  justify-around ">
+                {footerList && Object.keys(footerList).map((footer:string)=>(
+                    <div className="flex flex-col gap-2">
+                        <h3 className="font-bold text-lg">{footer}</h3>
+                        {footerList[footer]?.map((item:FooterProps)=>(
+                            <div>
+                                <a
+                                    rel="noreferrer noopener"
+                                    href={item.href}
+                                    className="opacity-60 hover:opacity-100"
+                                >
+                                {item.label}
+                                </a>
 
-      <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
-        <div className="col-span-full xl:col-span-2">
-          <a
-            rel="noreferrer noopener"
-            href="/"
-            className="font-bold text-xl flex"
-          >
-            ShadcnUI/React
-          </a>
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </section>
         </div>
 
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Follow US</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Github
-            </a>
-          </div>
 
-          <div>
+        <section className="container pb-14 text-center">
+            <h3>
+            &copy; 2024 Made by {" "}
             <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
+                rel="noreferrer noopener"
+                target="_blank"
+                href={creatorLink}
+                className="text-primary transition-all border-primary hover:border-b-2"
             >
-              Twitter
+                {creator}
             </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Dribbble
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Platforms</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Web
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Mobile
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Desktop
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">About</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Features
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Pricing
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              FAQ
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Community</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Youtube
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Discord
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Twitch
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="container pb-14 text-center">
-        <h3>
-          &copy; 2024 Landing page made by{" "}
-          <a
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://www.linkedin.com/in/leopoldo-miranda/"
-            className="text-primary transition-all border-primary hover:border-b-2"
-          >
-            Leo Miranda
-          </a>
-        </h3>
-      </section>
+            </h3>
+        </section>
     </div>
   );
 };

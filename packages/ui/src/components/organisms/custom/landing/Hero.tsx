@@ -3,15 +3,10 @@ import { Button } from "../../../atoms/shadcn/button";
 import { buttonVariants } from "../../../atoms/shadcn/button";
 import HeroCards  from "./HeroCards";
 import { useEffect, useState } from "react";
+import { HeroProps } from "@repo/ts-types/src/landing-page/v1";
 
-interface HeroProps {
-  loginFunction: () => void;
-  documentationLink: string;
-  tagline: string;
-  description: string;
-}
-
-const Hero = ({loginFunction,documentationLink,tagline,description}: HeroProps) => {
+const Hero = ({loginFunction,documentationLink,tagline,description,testimonials,
+    pricingList,teamList,featuresWithDescription}: HeroProps) => {
     const [taglineArray,setTaglineArray] = useState<string[]>([])
     useEffect(()=>{
         if(tagline){
@@ -62,7 +57,8 @@ const Hero = ({loginFunction,documentationLink,tagline,description}: HeroProps) 
 
       {/* Hero cards sections */}
       <div className="z-10">
-        <HeroCards />
+        <HeroCards testimonials={testimonials} pricingList={pricingList}
+         teamList={teamList} featuresWithDescription={featuresWithDescription}/>
       </div>
 
       {/* Shadow effect */}

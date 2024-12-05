@@ -6,39 +6,31 @@ import Testimonials from '../../organisms/custom/landing/Testimonials';
 import Pricing from '../../organisms/custom/landing/Pricing';
 import FAQ from '../../organisms/custom/landing/FAQ';
 import Footer from '../../organisms/custom/landing/Footer';
+import { LandingPageProps} from '@repo/ts-types/src/landing-page/v1';
+import { useEffect } from 'react';
+import { Team } from '../../organisms/custom/landing/Team';
 
-interface RouteProps {
-  href: string;
-  label: string;
-}
+const LandingPage = ({routeList,githubLink,loginFunction,documentationLink,title,logo,
+  darkLogo,tagline,description,featuresWithDescription,featureList,testimonials,pricingList,
+  FAQList, footerList, creator, creatorLink, teamList}: LandingPageProps) => {
+    
 
-interface LandingPageProps {
-  routeList: RouteProps[];
-  githubLink: string;
-  documentationLink: string;
-  title: string;
-  logo: string;
-  darkLogo: string;
-  loginFunction: () => void;
-  tagline: string;
-  description: string;
-  featuresWithDescription: any;
-  featureList: string[];
-}
-
-const LandingPage = ({routeList,githubLink,loginFunction,documentationLink,title,logo,darkLogo,tagline,description}: LandingPageProps) => {
-  
   return (
     <div className='flex flex-col items-center justify-center'>
       <Navbar routeList={routeList} githubLink={githubLink} title={title} logo={logo} 
       darkLogo={darkLogo} />
       <Hero loginFunction={loginFunction} documentationLink={documentationLink}
-      tagline={tagline} description={description} />
-      {/* <Features featureList={fea}/> */}
-      <Testimonials/>
-      <Pricing/>
-      <FAQ/>
-      <Footer/>
+      tagline={tagline} description={description} testimonials={testimonials}
+       pricingList={pricingList} teamList={teamList}
+       featuresWithDescription={featuresWithDescription} />
+      <Features featureList={featureList} featuresWithDescription={featuresWithDescription} />
+      <Testimonials testimonials={testimonials} />
+      <Team teamList={teamList} />
+      <Pricing pricingList={pricingList} />
+      <FAQ FAQList={FAQList} />
+      <Footer footerList={footerList} creator={creator} creatorLink={creatorLink} title={title} logo={logo}
+       darkLogo={darkLogo} />
+
     </div>
   );
 };

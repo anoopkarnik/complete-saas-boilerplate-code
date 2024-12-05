@@ -11,6 +11,7 @@
   "dependencies": {
     "@repo/typescript-config": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@repo/ts-types": "workspace:*",
     "next": "15.0.3",
     "path": "^0.12.7",
     "react": "19.0.0-rc-66855b96-20241106",

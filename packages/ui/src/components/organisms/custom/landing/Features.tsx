@@ -6,19 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "../../../molecules/shadcn/card";
+import { FeaturesProps,FeatureWithDescriptionProps } from "@repo/ts-types/src/landing-page/v1";
 
-
-interface FeatureWithDescriptionProps {
-  title: string;
-  description: string;
-}
-
-interface FeaturesProps {
-  features: FeatureWithDescriptionProps[];
-  featureList: string[];
-}
-
-const Features = ({features,featureList}: FeaturesProps) => {
+const Features = ({featuresWithDescription,featureList}: FeaturesProps) => {
   return (
     <section
       id="features"
@@ -45,7 +35,7 @@ const Features = ({features,featureList}: FeaturesProps) => {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description}: FeatureWithDescriptionProps) => (
+        {featuresWithDescription.map(({ title, description}: FeatureWithDescriptionProps) => (
           <Card key={title}>
             <CardHeader>
               <CardTitle>{title}</CardTitle>

@@ -19,19 +19,7 @@ import { MenuIcon } from "lucide-react";
 import { ModeToggle } from "../../../molecules/custom/v1/theme-toggle-dropdown";
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
-
-interface RouteProps {
-  href: string;
-  label: string;
-}
-
-interface NavbarProps {
-  routeList: RouteProps[];
-  githubLink: string;
-  title: string;
-  logo: string;
-  darkLogo: string;
-}
+import { NavbarProps, RouteProps } from "@repo/ts-types/src/landing-page/v1";
 
 const Navbar = ({routeList,githubLink,title,logo,darkLogo}: NavbarProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
