@@ -2,16 +2,9 @@ import { FormResult } from './FormResult';
 import { Card, CardContent, CardFooter, CardHeader } from '../../../../molecules/shadcn/card';
 
 import { BeatLoader } from 'react-spinners';
+import { VerificationCardProps } from '@repo/ts-types/src/auth/v1';
 
-interface VerificationCardProps {
-  error?:string;  
-  success?:string;
-  backFunction?:any;
-}
-
-const VerificationCard = ({error,success,backFunction}
-  :VerificationCardProps
-) => {
+const VerificationCard = ({error,success,backFunction}:VerificationCardProps) => {
 
   return (
     <Card className='w-[400px] bg-white text-black shadow-xl shadow-white/20'>

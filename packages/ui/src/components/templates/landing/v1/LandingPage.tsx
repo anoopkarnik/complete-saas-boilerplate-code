@@ -1,14 +1,14 @@
 "use client"
-import Navbar from '../../organisms/custom/landing/Navbar';
-import Hero from '../../organisms/custom/landing/Hero';
-import Features from '../../organisms/custom/landing/Features';
-import Testimonials from '../../organisms/custom/landing/Testimonials';
-import Pricing from '../../organisms/custom/landing/Pricing';
-import FAQ from '../../organisms/custom/landing/FAQ';
-import Footer from '../../organisms/custom/landing/Footer';
+import Navbar from '../../../organisms/custom/landing/Navbar';
+import Hero from '../../../organisms/custom/landing/Hero';
+import Features from '../../../organisms/custom/landing/Features';
+import Testimonials from '../../../organisms/custom/landing/Testimonials';
+import Pricing from '../../../organisms/custom/landing/Pricing';
+import FAQ from '../../../organisms/custom/landing/FAQ';
+import Footer from '../../../organisms/custom/landing/Footer';
 import { LandingPageProps} from '@repo/ts-types/src/landing-page/v1';
 import { useEffect } from 'react';
-import { Team } from '../../organisms/custom/landing/Team';
+import { Team } from '../../../organisms/custom/landing/Team';
 
 const LandingPage = ({routeList,githubLink,loginFunction,documentationLink,title,logo,
   darkLogo,tagline,description,featuresWithDescription,featureList,testimonials,pricingList,

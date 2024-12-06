@@ -29,10 +29,10 @@ const Footer = ({footerList,creator,creatorLink,title,logo,darkLogo}:FooterCompo
             </section>
             <section className="w-full flex flex-wrap  justify-around ">
                 {footerList && Object.keys(footerList).map((footer:string)=>(
-                    <div className="flex flex-col gap-2">
+                    <div key={footer} className="flex flex-col gap-2">
                         <h3 className="font-bold text-lg">{footer}</h3>
                         {footerList[footer]?.map((item:FooterProps)=>(
-                            <div>
+                            <div key={item.label}>
                                 <a
                                     rel="noreferrer noopener"
                                     href={item.href}

@@ -5,7 +5,7 @@ import { useTransition } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { Button } from '../../../../atoms/shadcn/button';
-import { RegisterSchema } from '@repo/zod/src/auth'
+import { RegisterSchema } from '@repo/zod/auth'
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import {
@@ -18,22 +18,10 @@ import {
 } from '../../../../molecules/shadcn/form'
 import { Input } from '../../../../atoms/shadcn/input';
 import { FormResult } from './FormResult';
-
-interface RegisterCardProps {
-  showEmail?: boolean;
-  showGoogleProvider?: boolean;
-  showGithubProvider?: boolean;
-  showLinkedinProvider?: boolean;
-  onEmailSubmit?: any;
-  onGoogleProviderSubmit?: any;
-  onGithubProviderSubmit?: any;
-  onLinkedinProviderSubmit?: any;
-  backFunction?:any;
-}
-
+import { RegisterCardProps } from '@repo/ts-types/src/auth/v1';
 const RegisterCard = ({showEmail,showGoogleProvider,showGithubProvider,showLinkedinProvider,
-  onEmailSubmit,onGoogleProviderSubmit,onGithubProviderSubmit,onLinkedinProviderSubmit,backFunction}
-  :RegisterCardProps
+  onEmailSubmit,onGoogleProviderSubmit,onGithubProviderSubmit,onLinkedinProviderSubmit,backFunction,
+  errorMessage}:RegisterCardProps
 ) => {
   const form = useForm<z.infer<typeof RegisterSchema>>({
     resolver: zodResolver(RegisterSchema),
@@ -64,7 +52,7 @@ const RegisterCard = ({showEmail,showGoogleProvider,showGithubProvider,showLinke
       {showEmail &&
         <CardContent>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(handleSubmit)} className='space-y-6'>
+            <form onSubmit={form.handleSubmit(handleSubmit)} className='space-y-6 '>
               <div className='space-y-4 mb-4'>
               <FormField control={form.control} name="name" render={({field})=>(
                   <FormItem>

@@ -1,8 +1,4 @@
-interface QuoteProps {
-    quote: string,
-    author: string,
-    credential: string
-}
+import {QuoteProps} from "@repo/ts-types/src/auth/v1"
 
 const Quote = ({quote,author,credential}:QuoteProps) => {
   return (

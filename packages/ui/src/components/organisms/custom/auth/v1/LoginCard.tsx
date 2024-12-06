@@ -5,7 +5,7 @@ import { useTransition } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { Button } from '../../../../atoms/shadcn/button';
-import { LoginSchema } from '@repo/zod/src/auth'
+import { LoginSchema } from '@repo/zod/auth'
 import {  useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import {
@@ -18,20 +18,7 @@ import {
 } from '../../../../molecules/shadcn/form'
 import { Input } from '../../../../atoms/shadcn/input';
 import { FormResult } from './FormResult';
-
-interface LoginCardProps {
-  showEmail?: boolean;
-  showGoogleProvider?: boolean;
-  showGithubProvider?: boolean;
-  showLinkedinProvider?: boolean;
-  onEmailSubmit?: any;
-  onGoogleProviderSubmit?: any;
-  onGithubProviderSubmit?: any;
-  onLinkedinProviderSubmit?: any;
-  forgotPasswordFunction?: any;
-  backFunction?:any;
-  errorMessage?:string;
-}
+import { LoginCardProps } from '@repo/ts-types/src/auth/v1';
 
 const LoginCard = ({showEmail,showGoogleProvider,showGithubProvider,showLinkedinProvider,onEmailSubmit,
   onGoogleProviderSubmit,onGithubProviderSubmit,onLinkedinProviderSubmit,forgotPasswordFunction,backFunction,errorMessage}

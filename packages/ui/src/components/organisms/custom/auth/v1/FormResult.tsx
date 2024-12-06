@@ -1,10 +1,5 @@
 import { BsExclamationTriangle,BsExclamationCircle } from 'react-icons/bs';
-
-interface FormResultProps{
-    type: 'error' | 'success',
-    message?: string;
-}
-
+import { FormResultProps } from '@repo/ts-types/src/auth/v1';
 export const FormResult = ({type,message}:FormResultProps) => {
     if (!message) return null
     if (type === 'success') return (

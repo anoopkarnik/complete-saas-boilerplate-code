@@ -16,13 +16,7 @@ import {
 } from '../../../../molecules/shadcn/form.js'
 import { Input } from '../../../../atoms/shadcn/input.js';
 import { FormResult } from './FormResult.js';
-
-interface ForgotPasswordCardProps {
-  errorMessage?:string;  
-  successMessage?:string;
-  resetFunction?:any; 
-  backFunction?:any;
-}
+import { ForgotPasswordCardProps } from '@repo/ts-types/src/auth/v1';
 
 const ForgotPasswordCard = ({errorMessage,successMessage,resetFunction,backFunction}
   :ForgotPasswordCardProps

@@ -1,7 +1,8 @@
 import { Card, CardContent } from '../../../../molecules/shadcn/card';
 import { BeatLoader } from 'react-spinners';
+import { LoadingCardProps } from '@repo/ts-types/src/auth/v1';
 
-const LoadingCard = ({title,description}:any) => {
+const LoadingCard = ({title,description}:LoadingCardProps) => {
 
   return (
     <div className='w-full flex items-center justify-center mt-10'>

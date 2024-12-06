@@ -1,14 +1,8 @@
 import { Card,  CardFooter, CardHeader } from '../../../../molecules/shadcn/card.js';
 import { BsExclamationTriangle } from 'react-icons/bs';
+import { ErrorCardProps } from '@repo/ts-types/src/auth/v1';
 
-interface ErrorCardProps {
-  errorMessage?:string;
-  backFunction?:any
-}
-
-const ErrorCard = ({errorMessage,backFunction}
-  :ErrorCardProps
-) => {
+const ErrorCard = ({errorMessage,backFunction}:ErrorCardProps) => {
 
   return (
     <Card className='w-[400px] bg-white text-black shadow-xl shadow-white/20'>
